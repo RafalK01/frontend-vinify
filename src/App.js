@@ -6,7 +6,7 @@ import WineDetail from "./pages/WineDetail";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App col">
 
           <Routes>
              <Route path="/" element={<HomePage />} />
