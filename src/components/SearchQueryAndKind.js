@@ -8,68 +8,68 @@ import { useState } from "react"
 
 function SearchQueryAndKind({ wineSearch }) {
   const [searchQuery, setSearchQuery] = useState("")
-  const [searchKind, setSearchKind] = useState("")
 
   // searches by query typed in the form
   const handleQuerySearch = () => {
-    wineSearch({
-      query: searchQuery,
-    });
+    wineSearch({ query: searchQuery})
     setSearchQuery("")
-  };
+  }
 
-  // searches by kind of wine
-  const handleKindClick = async (e) => {
+   const handleKindClick = (e) => {
     const selectedKind = e.target.getAttribute("value")
-    setSearchKind(selectedKind)
-    try {
-      await wineSearch({ kind: searchKind })
-    } catch (error) {
-      console.log(error)
-    }
+    wineSearch({ kind: selectedKind })
   }
 
   return (
-    <div className="row px-3">
-      <div className="input-group my-3 px-4">
+    <div className="row  m-0 p-0">
+      <div className="input-group my-3 mx-0 px-4">
         <input
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           type="text"
-          className="form-control"
+          className="form-control search-input"
           placeholder="Search..."
         />
         <button
           onClick={handleQuerySearch}
-          className="btn btn-outline-secondary"
+          className="btn search-btn"
           type="button"
           id="button-addon2"
         >
           <img src={magnifyingGlass} alt="magnifyingGlass" />
         </button>
       </div>
+
       <div
         className="mb-2 d-flex overflow-scroll"
         style={{ maxWidth: "400px" }}
       >
         <img
-          onClick={handleKindClick}
-          value="natural"
+          onClick={handleQuerySearch}
+          value="Natural"
           src={Natural}
           alt="Natural"
         />
-        <img onClick={handleKindClick} value="red" src={Red} alt="Red" />
-        <img onClick={handleKindClick} value="rose" src={Rose} alt="Rose" />
+        <img 
+          onClick={handleKindClick} 
+          value="Red" 
+          src={Red} 
+          alt="Red" />
+        <img 
+          onClick={handleKindClick} 
+          value="Rose" 
+          src={Rose} 
+          alt="Rose" />
         <img
           onClick={handleKindClick}
-          value="sparkling"
+          value="Sparkling"
           className="px-3"
           src={Sparkling}
           alt="Sparkling"
         />
         <img
           onClick={handleKindClick}
-          value="white"
+          value="White"
           className="px-3"
           src={White}
           alt="Natural"

@@ -4,6 +4,8 @@
     --text-black: #0E0C0C;
     --icons-gray: #EAE8E9;
 }
+
+
 #root {
     display: flex;
     align-items: center;
@@ -11,7 +13,6 @@
 }
 .App {
     color: var(--text-black);
-    width: 100vw;
     max-width: 400px;
     font-family: 'Tinos', serif;
     font-size: 16px;
@@ -40,16 +41,19 @@
     height: 400px;
 }
 
-.home-page{
+.home-page, .liked-wines, .profile{
     width: 100%;
     background-image: url("../src/images/background\ homepagepng.png");
-    padding-bottom: 102px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    min-height: 100vh;
 }
 
 /* ---------NAV BAR------------ */
 .nav-bar{
     width: 400px;
-    height: 102px;
+    height: 82px;
     background-color: var(--green);
     position: fixed;
     bottom: 0;
@@ -69,26 +73,23 @@
 .camera-button{
     background-color: #fff;
     border-radius: 999px;
-    margin-bottom: 80px;
+    margin-bottom: 55px;
     border: 4px solid var(--green);
 }
 
-.white-line{
-    width: 139px;
-    height: 4px;
-    background: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 2px;
-}
-
 .vinify{
-    font-size: 30px;
+    font-family: 'Tinos';
     font-style: normal;
-    font-weight: 700;}
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+}
 
 .user-profile-picture{
     border-radius: 999px;
     width: 38px;
+    border: 1px solid #D7DCE1;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
 }
 
 .welcome-text{
@@ -97,11 +98,26 @@
     font-weight: 700;
 }
 
+.search-input{
+    width: 341px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+}
+
+.search-btn{
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+}
+
 .kind-filter{
     display: flex;
     overflow-x: scroll;
     max-width: 400px;
 }
+
 
 .recommendation-card{
    width: 293px;
@@ -127,21 +143,6 @@
     margin-left: 110px;
 }
 
-.featured-card{
-    width: 145px;
-    height: 214px;
-    border: none;
-    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
-    border-radius: 8px;
-    flex-shrink: 0;
-
-}
-
-
-.featured-card img{
-    width: 48px;
-    height: 160px;
-}
 
 /* food paring search cards */
 
@@ -194,4 +195,207 @@
 .seafood{
     background-image: url('./images/ParingIcons//Seafood\ iconpng.png');
     background-size: cover;
+}
+
+
+/* {---------SEARCH RESULTS PAGE---------------} */
+
+.search-results-page, .wine-detail {
+    background-image: url('./images/Background-green.png');
+    padding-bottom: 130px;
+    min-height: 100vh;
+}
+
+.search-results-page h1 {
+    font-family: "Inter";
+    font-size: 20px;
+}
+
+.detail-filter-icon{
+    width: 60px;
+    height: 75px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+}
+
+.detail-filter-icon p{
+    font-size: 10px;
+    font-family: "Inter";
+    color: var(--green);
+}
+
+
+.detail-filter-country{
+    background-image: url('./images//DetailFilterIcons/location-svgrepo-com\ 2png.png');
+}
+
+.detail-filter-region{
+    background-image: url('./images//DetailFilterIcons/chinese-mountain-svgrepo-com\ 1png.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.detail-filter-taste{
+    background-image: url('./images/DetailFilterIcons/cherry-svgrepo-com\ 1png.png');
+}
+
+.detail-filter-style{
+    background-image: url('./images/DetailFilterIcons/wine-grape-svgrepo-com\ 1png.png');
+}
+
+.detail-filter-grape{
+    background-image: url('./images/DetailFilterIcons/grapes-svgrepo-com\ 1png.png');
+}
+
+/* --------header with back icon--------- */
+.top-bar-back{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Inter";
+}
+.back-icon{
+    position: absolute;
+}
+.top-text{
+    position: relative;
+}
+/* -------------------------------- */
+
+.price-range{
+    font-family: "Inter";
+}
+
+
+.small-wine-card{
+    width: 150px;
+    height: 214px;
+    border: none;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+    border-radius: 8px;
+    flex-shrink: 0;
+    resize: both;
+    overflow: hidden;
+} 
+
+.small-wine-card img{
+    width: 46px;
+    height: 160px;
+}
+
+.small-wine-card p{
+    font-size: 14px;
+}
+
+.small-wine-card a{
+    text-decoration: none;
+    color: var(--text-black);
+}
+
+.small-card-name{
+    font-size: 20px;
+    white-space: wrap;
+}
+
+
+.wine-info-card{
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+}
+
+.wine-info-card span{
+    font-weight: 700;
+}
+
+.profile-picture{
+    width: 130px;
+    border-radius: 999px;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+}
+
+.profile-content{
+    height: 65vh;
+}
+
+.green-button{
+    color: white;
+    background-color: var(--green);
+}
+
+.green-button:hover{
+    color: var(--green);
+    background-color: white;
+    border: 1px solid var(--green);
+}
+
+.white-button{
+    color: var(--green);
+    background-color: white;
+    border: 1px solid var(--green);
+}
+
+.white-button:hover{
+    color: white;
+    background-color: var(--green);
+}
+
+
+/* -----------Support Styling ------------- */
+.support {
+    background-image: url('./images/Background-green.png');
+    height:100vh;
+}
+
+.history {
+    /* display: flex; */
+    overflow: auto;
+    max-width: 400px;
+    /* padding: 0; */
+}
+  
+.history li {
+    list-style-type: none;
+    cursor: pointer;
+    width: 100px;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides any overflowing content */
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    background-color: white;
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+
+.history li:hover{
+    background-color: var(--green);
+    border: 1px solid white;
+    color: white;
+}
+
+
+.feed {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+}
+
+.feed li {
+    list-style-type: none;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+    border-radius: 3px;
+}
+
+.question{
+    margin: 10px 10px 10px 80px;
+}
+
+.answer{
+    margin: 10px 80px 10px 10px;
 }

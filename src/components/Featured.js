@@ -12,7 +12,7 @@ function Featured(){
 
         <div className="mb-2 d-flex flex-row overflow-scroll">
 
-            <div className="card featured-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
+            <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
                     <img className="mx-2" src={rose} alt="wine" />
                 </div>
@@ -22,7 +22,7 @@ function Featured(){
                     <p>Flowery rose from France...</p>
                 </div>
             </div>
-            <div className="card featured-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
+            <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
                     <img className="mx-2" src={white} alt="wine" />
                 </div>
@@ -32,7 +32,7 @@ function Featured(){
                     <p>White Wine from Spain...</p>
                 </div>
             </div>
-            <div className="card featured-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
+            <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
                     <img className="mx-2" src={champ} alt="wine" />
                 </div>
@@ -42,7 +42,7 @@ function Featured(){
                     <p>White Limited edition old vines</p>
                 </div>
             </div>
-            <div className="card featured-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
+            <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
                     <img className="mx-2" src={wine} alt="wine" />
                 </div>

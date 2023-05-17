@@ -11,14 +11,14 @@ function NavBar() {
             <img src={home} alt="home button" />
             <p>HOME</p>
           </a>
-          <a className="text-center" href='/wine-list'>
+          <a className="text-center" href='/liked'>
             <img src={bookmark} alt="bookmark button" />
             <p>WINE LIST</p>
           </a>
           <a href="/add" className="camera-button p-3 text-center">
             <img src={camera} alt="add wine button" />
           </a>
-          <a className="text-center" href='/community'>
+          <a className="text-center" href='/support'>
             <img src={community} alt="support button" />
             <p>SUPPORT</p>
           </a>

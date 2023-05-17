@@ -11,7 +11,6 @@ function Recommendation(){
     useEffect(() => {
         axios.get("http://localhost:5005/api/random-wine")
           .then((response) => {
-            console.log("response.data", response.data)
             setRecommendation(response.data);
           })
       }, [])
@@ -24,8 +23,8 @@ function Recommendation(){
               <div className="recommendation-card card my-5 p-3 d-flex align-items-center">
                   <img className="wine-reccom-img"src={defaultWine} alt="wine bottle" />
                 <div className='wine-reccom-text'>
-                  <h1 className="">{recommendation?.name}</h1>
-                  <p>{recommendation?.description}</p>
+                  <h1 className="">{recommendation?.name?.split(' ').slice(0, 3).join(' ')}</h1>
+                  <p>{recommendation?.headline}</p>
                 </div>
               </div>
             </div> 
