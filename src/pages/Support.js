@@ -7,6 +7,8 @@ function Support() {
     const [ message, setMessage ] = useState(null)
     const [ previousChats, setPreviousChats]= useState([])
     const [ currentTitle, setCurrentTitle ]= useState(null)
+    const [ loading, setLoading ]= useState(false)
+
   
     const createNewChat = () => {
       setMessage(null)
@@ -21,6 +23,7 @@ function Support() {
     }
   
     const getMessages = async () => {
+      setLoading(true)
       const options = {
         method: 'POST',
         body: JSON.stringify({
@@ -34,16 +37,15 @@ function Support() {
       try {
         const response = await fetch('http://localhost:5005/api/completions', options)
         const data = await response.json()
-        console.log(data)
         setMessage(data.choices[0].message)
-  
+        setLoading(false)
+
       } catch (error) {
         console.error(error)
       }
     }
   
     useEffect(() =>{
-      console.log(currentTitle, value, message)
   
       if(!currentTitle && value && message){
         setCurrentTitle(value)
@@ -93,12 +95,20 @@ function Support() {
                 <li key={index} className={chatMessage.role === "user" ? "question" : "answer"}>
                 <p className="chat-element m-0 p-2">{chatMessage.content}</p>
               </li>)}
+              {loading && 
+                <div className="d-flex justify-content-center">
+                  <div className="spinner-border " role="status">
+                    <span className="sr-only"></span>
+                  </div>
+                </div>   
+              }
+
             </ul>
             <div className="bottom-section">
               <div className="input-group input-container p-3">
-                <input value={value} onChange={(e) => setValue(e.target.value)} type="text" class="form-control" placeholder="e.g. What is Chardonnay?"/>
-                <div class="input-group-append">
-                  <button id="submit" onClick={getMessages} class="btn btn-outline-secondary" type="button">➢</button>
+                <input value={value} onChange={(e) => setValue(e.target.value)} type="text" className="form-control search-input" placeholder="e.g. What is Chardonnay?"/>
+                <div class="">
+                  <button id="submit" onClick={getMessages} class="btn search-btn py-2" type="button">➢</button>
                 </div>
               </div>
             </div>

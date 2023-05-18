@@ -3,6 +3,18 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import NavBar from "../components/Navbar"
 import TopBackBar from "../components/TopBarBack"
+import lemon from '../images/Flavours/lemon-svgrepo-com (1) 1lemon (1).png'
+import peach from '../images/Flavours/peach-svgrepo-com (2) 1peach (1).png'
+import grapefruit from '../images/Flavours/orange-svgrepo-com (1) 1grapefruit (1).png'
+import melon from '../images/Flavours/melon-svgrepo-com (1) 1melon (1).png'
+import salt from '../images/Flavours/salt-svgrepo-com (1) 1salt (1).png'
+import wineStats from '../images/Flavours/White card.png';
+import fish from '../images/ParingIcons/SmallPairngIcons/fish-svgrepo-com 1.png'
+import meat from '../images/ParingIcons/SmallPairngIcons/meat-on-the-bone-1-svgrepo-com 1.png'
+import veg from '../images/ParingIcons/SmallPairngIcons/bell-pepper-svgrepo-com 1.png'
+import seafood from '../images/ParingIcons/SmallPairngIcons/reshot-icon-crab-6DLGZ5Q3EF 1.png'
+import cheese from '../images/ParingIcons/SmallPairngIcons/reshot-icon-cheese-5FDLGPV2JE 1.png'
+
 
 
 function WineDetail(){
@@ -29,26 +41,35 @@ function WineDetail(){
         </div>
 
         {/* CHANGE THE PICTURES AND STY:ES */}
-        <div className="container filter-icons d-flex justify-content-between">
+        <div className="filter-icons d-flex pt-2 w-100 justify-content-evenly">
 
-                <div className="card detail-filter-country detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Lemon</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={lemon} alt="" />
+                    <p className="text-center my-1 flavour">Lemon</p>
                 </div>
-                <div className="card detail-filter-region detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Peach</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={peach} alt="" />
+                    <p className="text-center my-1 flavour">Lemon</p>
                 </div>
-                <div className="card detail-filter-taste detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Grapefruit</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={grapefruit} alt="" />
+                    <p className="text-center my-1 flavour">Lemon</p>
                 </div>
-                <div className="card detail-filter-style detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Honeymelon</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={melon} alt="" />
+                    <p className="text-center my-1 flavour">Lemon</p>
                 </div>
-                <div className="card detail-filter-grape detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Salty</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={salt} alt="" />
+                    <p className="text-center my-1 flavour">Lemon</p>
                 </div>
         </div>
 
-        <p className="p-3 w-100 text-end" >{Math.floor(Math.random() * (100 - 60 + 1)) + 50}% match</p>
+        <p className="m-0 pt-3 px-3 w-100 text-end" >{Math.floor(Math.random() * (100 - 60 + 1)) + 50}% match</p>
+
+        <div className="wine-stats">
+            <img src={wineStats} alt="wine-stats" />
+        </div>
 
         <div className="container">
             <h5 className="text-center">Wine information</h5>
@@ -62,22 +83,27 @@ function WineDetail(){
             <h5 className="text-center">Paring</h5>
 
         {/* CHANGE THE PICTURES AND STY:ES */}
-            <div className="container filter-icons d-flex justify-content-between">
+        <div className="filter-icons d-flex pt-2 w-100 justify-content-evenly">
 
-                <div className="card detail-filter-country detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Lemon</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={fish} alt="" />
+                    <p className="text-center my-1 flavour">Fish</p>
                 </div>
-                <div className="card detail-filter-region detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Peach</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={meat} alt="" />
+                    <p className="text-center my-1 flavour">Meat</p>
                 </div>
-                <div className="card detail-filter-taste detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Grapefruit</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={veg} alt="" />
+                    <p className="text-center my-1 flavour">Vegetables</p>
                 </div>
-                <div className="card detail-filter-style detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Honeymelon</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={seafood} alt="" />
+                    <p className="text-center my-1 flavour">Seafood</p>
                 </div>
-                <div className="card detail-filter-grape detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">Salty</p>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img className="flavour-img" src={cheese} alt="" />
+                    <p className="text-center my-1 flavour">Cheese</p>
                 </div>
         </div>
 

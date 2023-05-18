@@ -38,27 +38,27 @@ function LoginPage(props) {
   };
   
   return (
-    <div className="LoginPage">
+    <div className="login-page">
       
-      <h1>VINIFY</h1>
+      <h1 className="pb-4 vinify text-center">VINIFY</h1>
 
       <div className="card signup-card">
 
         <form className="p-5 signup-form" onSubmit={handleLoginSubmit}>
-          <label className="form-label">Email:</label>
-          <input className="form-control" type="email" name="email" value={email} onChange={handleEmail} />
+          <label className="form-label m-1">Email:</label>
+          <input className="form-control auth-input" type="email" name="email" value={email} onChange={handleEmail} />
 
-          <label className="form-label">Password:</label>
-          <input className="form-control"type="password" name="password" value={password} onChange={handlePassword} />
+          <label className="form-label m-1">Password:</label>
+          <input className="form-control auth-input"type="password" name="password" value={password} onChange={handlePassword} />
 
-          <button className="btn btn-primary mt-3" type="submit">Login</button>
+          <button className="btn green-button m-3 px-4" type="submit">Login</button>
         </form>
-        { errorMessage && <p className="error-message">{errorMessage}</p> }
+        {errorMessage && <p className="text-center error-message">{errorMessage}</p> }
 
       </div>  
 
-      <p>Don't have an account yet?</p>
-      <Link className="btn btn-secondary" to={"/signup"}> Sign Up</Link>
+      <p className="pt-4 pb-2">Don't have an account?</p>
+      <Link className="btn white-button px-3" to={"/signup"}> Sign up</Link>
     </div>
   )
 }

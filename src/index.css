@@ -19,11 +19,16 @@
 }
  
 /* -------------SIGN UP & LOG IN---------------------- */
-.SignupPage, .LoginPage{
+.signup-page, .login-page{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url('./images/good-backgroundhomepage.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
 }
 
 .signup-form {
@@ -31,6 +36,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.signup-card{
+    border: none;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+}
+
+.auth-input{
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
 }
 
 .signup-card form{
@@ -43,9 +59,10 @@
 
 .home-page, .liked-wines, .profile{
     width: 100%;
-    background-image: url("../src/images/background\ homepagepng.png");
+    background-image: url("./images/good-backgroundhomepage.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding-bottom: 100px;
     min-height: 100vh;
 }
@@ -70,11 +87,19 @@
     font-size: 10px;
 }
 
+.nav-icons, .flavour-img{
+    width: 40px;
+}
+
 .camera-button{
     background-color: #fff;
     border-radius: 999px;
     margin-bottom: 55px;
     border: 4px solid var(--green);
+}
+
+.camera-button img{
+    width: 35px;
 }
 
 .vinify{
@@ -116,6 +141,18 @@
     display: flex;
     overflow-x: scroll;
     max-width: 400px;
+}
+
+.wine-kind-filter img{
+    width: 130px;
+}
+
+.magnifier{
+    width: 25px;
+}
+
+.settings-icon{
+    width: 45px;
 }
 
 
@@ -201,9 +238,13 @@
 /* {---------SEARCH RESULTS PAGE---------------} */
 
 .search-results-page, .wine-detail {
-    background-image: url('./images/Background-green.png');
-    padding-bottom: 130px;
+    background-image: url('./images/Background\ whitepng.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 100px;
     min-height: 100vh;
+
 }
 
 .search-results-page h1 {
@@ -221,34 +262,24 @@
     box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
 }
 
-.detail-filter-icon p{
-    font-size: 10px;
+.detail-filter-icon img{
+    height: 80px;
+}
+
+.sort-arrow{
+    width: 17px;
+}
+
+.flavour{
+    font-size: 12px;
     font-family: "Inter";
     color: var(--green);
 }
 
-
-.detail-filter-country{
-    background-image: url('./images//DetailFilterIcons/location-svgrepo-com\ 2png.png');
+.wine-stats img {
+    width: 400px;
 }
 
-.detail-filter-region{
-    background-image: url('./images//DetailFilterIcons/chinese-mountain-svgrepo-com\ 1png.png');
-    background-size: 80%;
-    background-repeat: no-repeat;
-}
-
-.detail-filter-taste{
-    background-image: url('./images/DetailFilterIcons/cherry-svgrepo-com\ 1png.png');
-}
-
-.detail-filter-style{
-    background-image: url('./images/DetailFilterIcons/wine-grape-svgrepo-com\ 1png.png');
-}
-
-.detail-filter-grape{
-    background-image: url('./images/DetailFilterIcons/grapes-svgrepo-com\ 1png.png');
-}
 
 /* --------header with back icon--------- */
 .top-bar-back{
@@ -258,6 +289,8 @@
 }
 .back-icon{
     position: absolute;
+    width: 20px;
+    padding-top: 4px;
 }
 .top-text{
     position: relative;
@@ -280,7 +313,7 @@
     overflow: hidden;
 } 
 
-.small-wine-card img{
+.small-wine-card-img{
     width: 46px;
     height: 160px;
 }
@@ -299,11 +332,16 @@
     white-space: wrap;
 }
 
+.wineCardBookmark{
+    width: 45px;
+}
+
 
 .wine-info-card{
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+    margin: 0px 15px;
 }
 
 .wine-info-card span{
@@ -312,9 +350,36 @@
 
 .profile-picture{
     width: 130px;
-    border-radius: 999px;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
+    flex-shrink: 0;
+
+}
+
+.profile-picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+
+}
+
+.profile-picture-small {
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 50%;
     box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
 }
+.profile-picture-small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 .profile-content{
     height: 65vh;
@@ -345,8 +410,11 @@
 
 /* -----------Support Styling ------------- */
 .support {
-    background-image: url('./images/Background-green.png');
+    background-image: url('./images/Background\ whitepng.png');
     height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .history {

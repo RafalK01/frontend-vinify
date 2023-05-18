@@ -1,7 +1,7 @@
-import magnifyingGlass from "../images/magnifyingGlass.png"
-import Natural from "../images/WineKindIcons/Natural winepng.png"
-import Red from "../images/WineKindIcons/Red winepng.png"
-import Rose from "../images/WineKindIcons/Rosépng.png"
+import magnifyingGlass from "../images/magnifier.png"
+import Natural from "../images/WineKindIcons/Natural winepng (1).png"
+import Red from "../images/WineKindIcons/Red winered png.png"
+import Rose from "../images/WineKindIcons/Rosépng (1).png"
 import Sparkling from "../images/WineKindIcons/Sparklingpng.png"
 import White from "../images/WineKindIcons/White winepng.png"
 import { useState } from "react"
@@ -11,7 +11,9 @@ function SearchQueryAndKind({ wineSearch }) {
 
   // searches by query typed in the form
   const handleQuerySearch = () => {
-    wineSearch({ query: searchQuery})
+    if(searchQuery){
+      wineSearch({ query: searchQuery})
+    }
     setSearchQuery("")
   }
 
@@ -36,12 +38,12 @@ function SearchQueryAndKind({ wineSearch }) {
           type="button"
           id="button-addon2"
         >
-          <img src={magnifyingGlass} alt="magnifyingGlass" />
+          <img className="magnifier"src={magnifyingGlass} alt="magnifyingGlass" />
         </button>
       </div>
 
       <div
-        className="mb-2 d-flex overflow-scroll"
+        className="mb-2 d-flex overflow-scroll wine-kind-filter"
         style={{ maxWidth: "400px" }}
       >
         <img
@@ -55,24 +57,25 @@ function SearchQueryAndKind({ wineSearch }) {
           value="Red" 
           src={Red} 
           alt="Red" />
+        <img
+          onClick={handleKindClick}
+          value="White"
+          className="px-3"
+          src={White}
+          alt="White"
+        />  
         <img 
           onClick={handleKindClick} 
           value="Rose" 
           src={Rose} 
           alt="Rose" />
+        
         <img
           onClick={handleKindClick}
           value="Sparkling"
           className="px-3"
           src={Sparkling}
           alt="Sparkling"
-        />
-        <img
-          onClick={handleKindClick}
-          value="White"
-          className="px-3"
-          src={White}
-          alt="Natural"
         />
       </div>
     </div>

@@ -3,6 +3,9 @@ import rose from '../images/WindeBottles/rose.png'
 import white from '../images/WindeBottles/white.png'
 import champ from '../images/WindeBottles/chapm.png'
 
+import shapeBookmark from '../images/NavIcons/Shape-bookmark.png'
+
+
 
 
 function Featured(){
@@ -17,7 +20,9 @@ function Featured(){
                     <img className="mx-2" src={rose} alt="wine" />
                 </div>
                 <div>
-                    <p className="text-end">📎</p>
+                    <div className="text-end">
+                        <img className="wineCardBookmark" src={shapeBookmark} alt="bookmark" />
+                    </div>
                     <h5>Pillar</h5>
                     <p>Flowery rose from France...</p>
                 </div>
@@ -27,7 +32,9 @@ function Featured(){
                     <img className="mx-2" src={white} alt="wine" />
                 </div>
                 <div>
-                    <p className="text-end">📎</p>
+                    <div className="text-end">
+                        <img className="wineCardBookmark" src={shapeBookmark} alt="bookmark" />
+                    </div>
                     <h5>Pillar</h5>
                     <p>White Wine from Spain...</p>
                 </div>
@@ -37,17 +44,21 @@ function Featured(){
                     <img className="mx-2" src={champ} alt="wine" />
                 </div>
                 <div>
-                    <p className="text-end">📎</p>
+                    <div className="text-end">
+                        <img className="wineCardBookmark" src={shapeBookmark} alt="bookmark" />
+                    </div>
                     <h5>Lanson</h5>
                     <p>White Limited edition old vines</p>
                 </div>
             </div>
             <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
-                    <img className="mx-2" src={wine} alt="wine" />
+                    <img className="mx-2" src={rose} alt="wine" />
                 </div>
                 <div>
-                    <p className="text-end">📎</p>
+                    <div className="text-end">
+                        <img className="wineCardBookmark" src={shapeBookmark} alt="bookmark" />
+                    </div>
                     <h5>Albarino Baixas</h5>
                     <p>White Limited edition old vines</p>
                 </div>

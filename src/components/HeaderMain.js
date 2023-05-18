@@ -4,7 +4,7 @@ import { AuthContext } from "./../context/auth.context"
 import defaultProfilePicture from '../images/default-profile-picture.png'
 import RafalProfilePic from '../images/RafalProfilePic.png'
 
-import settingsIcon from '../images/settingsIcon.png'
+import settingsIcon from '../images/settings.png'
 
 function HeaderMain() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
@@ -14,13 +14,15 @@ function HeaderMain() {
     return (
       <div className="mt-4 row px-2">
         <h1 className="vinify text-center">VINIFY</h1>
-        <div className="d-flex justify-content-between">
+        { user && <div className="d-flex justify-content-between">
           <div className="d-flex align-items-center">
-            <img className="user-profile-picture"src={RafalProfilePic} alt="profile" />
+          <div className="profile-picture-small">
+            <img className="" src={RafalProfilePic} alt="profile" />
+          </div>
             <p className="welcome-text mb-0 px-3">Welcome{user && " " + user.name}!</p>
           </div>  
-          <a href="/settings"><img src={settingsIcon}/></a>
-        </div>
+          <a href="/settings"><img className="settings-icon"src={settingsIcon}/></a>
+        </div>}
       </div>
     )
   }

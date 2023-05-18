@@ -1,8 +1,10 @@
-import country from '../images/DetailFilterIcons/location-svgrepo-com 2png.png'
-// import region
-// import taste
-// import style
-// import grape
+import country from '../images/DetailFilterIcons/country2.png'
+import region from '../images/DetailFilterIcons/region.png'
+import taste from '../images/DetailFilterIcons/taste.png'
+import style from '../images/DetailFilterIcons/style.png'
+import grape from '../images/DetailFilterIcons/grape.png'
+import downArrow from '../images/NavIcons/down-arrow.png'
+
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from "react"
 import axios from "axios"
@@ -49,30 +51,18 @@ function SearchResults({ search }) {
                     <p>0</p>
                     <p className="price-range">{price > 0 ? "+" + price: "+500"}</p>
                 </div>
-            </div>
-
-            <div className="container filter-icons d-flex justify-content-between">
-
-                <div className="card detail-filter-country detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">COUNTRY</p>
+                <div className="detail-filter-icon d-flex">
+                    <img src={country} alt="country" />
+                    <img src={region} alt="country" />
+                    <img src={taste} alt="country" />
+                    <img src={style} alt="country" />
+                    <img src={grape} alt="country" />
                 </div>
-                <div className="card detail-filter-region detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">REGION</p>
-                </div>
-                <div className="card detail-filter-taste detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">TASTE</p>
-                </div>
-                <div className="card detail-filter-style detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">STYLE</p>
-                </div>
-                <div className="card detail-filter-grape detail-filter-icon d-flex justify-content-end">
-                    <p className="text-center my-1">GRAPE</p>
-                </div>
-
 
             </div>
 
-            <div className="w-100 text-end p-3">Sort by ▼ </div>
+
+            <div className="w-100 text-end p-3">Sort by <span><img className="sort-arrow" src={downArrow} alt="sort" /></span></div>
 
             <div className='container d-flex flex-wrap justify-content-evenly'>
             {searchResults?.map(wine => (

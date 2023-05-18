@@ -9,6 +9,7 @@ import SearchResults from "./pages/SearchResults";
 import LikedWines from "./pages/LikedWines";
 import UserProfile from "./pages/UserProfile";
 import Support from "./pages/Support";
+import IsPrivate from "./components/IsPrivate";
 
 function App() {
 
@@ -30,11 +31,11 @@ function App() {
              <Route path="/signup" element={<SignupPage />} />
              <Route path="/login" element={<LoginPage />} />
              <Route path="/" element={<HomePage setSearch={setSearch}/>} />
-             <Route path="/search" element={<SearchResults search={search} />} />
-             <Route path="/wine/:wineId" element={<WineDetail />}/>
-             <Route path="/liked" element={<LikedWines />} />
+             <Route path="/search" element={<IsPrivate><SearchResults search={search} /></IsPrivate>} />
+             <Route path="/wine/:wineId" element={<IsPrivate><WineDetail /></IsPrivate>}/>
+             <Route path="/liked" element={<IsPrivate><LikedWines /></IsPrivate>} />
              <Route path="/profile" element={<UserProfile />} />
-             <Route path="/support" element={<Support />} />
+             <Route path="/support" element={<IsPrivate><Support /></IsPrivate>} />
           </Routes>    
  
     </div>

@@ -39,27 +39,28 @@ function SignupPage(props) {
   }
   
   return (
-      <div className="SignupPage">
+      <div className="signup-page">
 
-      <h1>VINIFY</h1>
+      <h1 className="pb-4 vinify text-center">VINIFY</h1>
+
       <div className="card signup-card">
           <form className="p-5 signup-form" onSubmit={handleSignupSubmit}>
 
-            <label className="form-label">Name:</label>
-            <input className="form-control" type="text" name="name" value={name} onChange={handleName} />
+            <label className="form-label m-1">Name:</label>
+            <input className="form-control auth-input" type="text" name="name" value={name} onChange={handleName} />
 
-            <label className="form-label">Email:</label>
-            <input className="form-control" type="email" name="email" value={email} onChange={handleEmail} />
+            <label className="form-label m-1">Email:</label>
+            <input className="form-control auth-input" type="email" name="email" value={email} onChange={handleEmail} />
 
-            <label className="form-label">Password:</label>
-            <input className="form-control" type="password" name="password" value={password} onChange={handlePassword} />
+            <label className="form-label m-1">Password:</label>
+            <input className="form-control auth-input" type="password" name="password" value={password} onChange={handlePassword} />
 
-            <button className="btn btn-primary mt-3" type="submit">Sign Up</button>
+            <button className="btn green-button m-3 px-4" type="submit">Sign up</button>
           </form>
-          { errorMessage && <p className="error-message">{errorMessage}</p> }
+          { errorMessage && <p className="text-center error-message">{errorMessage}</p> }
       </div>
-      <p>Already have account?</p>
-      <Link className="btn btn-secondary" to={"/login"}> Login</Link>
+      <p className="pt-4 pb-2" >Already have an account?</p>
+      <Link className="btn white-button px-4" to={"/login"}>Login</Link>
     </div>
       
     )
