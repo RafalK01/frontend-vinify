@@ -1,9 +1,9 @@
 import magnifyingGlass from "../images/magnifier.png"
-import Natural from "../images/WineKindIcons/Natural winepng (1).png"
-import Red from "../images/WineKindIcons/Red winered png.png"
-import Rose from "../images/WineKindIcons/Rosépng (1).png"
-import Sparkling from "../images/WineKindIcons/Sparklingpng.png"
-import White from "../images/WineKindIcons/White1.png"
+import Natural from "../images/WineKindIcons/natural-cropped.png"
+import Red from "../images/WineKindIcons/red-cropped.png"
+import Rose from "../images/WineKindIcons/rose-cropped.png"
+import Sparkling from "../images/WineKindIcons/sparkling-cropped.png"
+import White from "../images/WineKindIcons/white-cropped.png"
 import { useState } from "react"
 
 

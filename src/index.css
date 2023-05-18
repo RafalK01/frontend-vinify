@@ -145,6 +145,8 @@
 
 .wine-kind-filter img{
     width: 130px;
+    height: 50px;
+    padding: 0px 4px;
 }
 
 .magnifier{
@@ -205,32 +207,6 @@
 
 .italy{
     background-image: url('./images/Countries/Italypng.png');
-    background-size: cover;
-}
-
-.vegetables{
-    background-image: url('./images/ParingIcons//Seafood\ iconpng.png');
-    background-size: cover;
-}
-
-.fish{
-    background-image: url('./images/ParingIcons/Fish\ iconpng.png');
-    background-size: cover;
-}
-
-/* food paring search cards */
-.beef{
-    background-image: url('./images/ParingIcons/Beef\ iconpng.png');
-    background-size: cover;
-}
-
-.cheese{
-    background-image: url('./images/ParingIcons/Cheese\ iconpng.png');
-    background-size: cover;
-}
-
-.seafood{
-    background-image: url('./images/ParingIcons//Seafood\ iconpng.png');
     background-size: cover;
 }
 
@@ -471,4 +447,9 @@
 .small-wine-image{
     height: 170px;
     width: 55px;
+}
+
+.veg{
+    width: 115px;
+    margin-left: 20px;
 }

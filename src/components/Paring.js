@@ -1,4 +1,9 @@
 import { useState } from "react"
+import veg from '../images/ParingIcons/bell-pepper-svgrepo-com 1 (1).png'
+import fish from '../images/ParingIcons/fish-svgrepo-com 1 (1).png'
+import meat from '../images/ParingIcons/meat-on-the-bone-1-svgrepo-com 1 (1).png'
+import cheese from '../images/ParingIcons/SmallPairngIcons/reshot-icon-cheese-5FDLGPV2JE 1.png'
+import seafood from '../images/ParingIcons/reshot-icon-crab-6DLGZ5Q3EF 1 (1).png'
 
 function Paring({ wineSearch }) {
     // search wines by food pairing
@@ -17,6 +22,7 @@ function Paring({ wineSearch }) {
           value="Vegetables"
           className="card vegetables small-wine-card m-2 py-4">
           <h4 className="text-center py-2">Vegetables</h4>
+          <img className="veg" src={veg} alt="veg" />
         </div>
 
         <div 
@@ -24,6 +30,8 @@ function Paring({ wineSearch }) {
           value="Fish"
           className="card fish small-wine-card m-2 py-4">
           <h4 className="text-center py-2">Fish</h4>
+          <img className="veg p-1" src={fish} alt="fish" />
+
         </div>
 
         <div 
@@ -31,6 +39,8 @@ function Paring({ wineSearch }) {
           value="Beef"
           className="card beef small-wine-card m-2 py-4">
           <h4 className="text-center py-2">Beef</h4>
+          <img className="veg p-1" src={meat} alt="meat" />
+
         </div>
 
         <div 
@@ -38,6 +48,7 @@ function Paring({ wineSearch }) {
           value="Cheese"
           className="card cheese small-wine-card m-2 py-4">
           <h4 className="text-center py-2">Cheese</h4>
+          <img className="veg p-1" src={cheese} alt="cheese" />
         </div>
 
         <div 
@@ -45,6 +56,8 @@ function Paring({ wineSearch }) {
           value="Seafood"
           className="card seafood small-wine-card m-2 py-4">
           <h4 className="text-center py-2">Seafood</h4>
+          <img className="veg p-1" src={seafood} alt="seafood" />
+
         </div>
 
       </div>
