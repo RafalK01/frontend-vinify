@@ -162,7 +162,7 @@
    box-shadow: 0px 1px 1px #D7DCE1, 4px 4px 30px #D9D9D9;
    border-radius: 20px; 
    border: none;
-   background-image: url('../src/images/reccomBackground.png');
+   background-image: url('../src/images/recommBack.png');
    background-repeat: no-repeat;
    background-size: 95%;
    background-position: bottom;
@@ -314,8 +314,8 @@
 } 
 
 .small-wine-card-img{
-    width: 46px;
-    height: 160px;
+    height: 170px;
+    width: 55px;
 }
 
 .small-wine-card p{
@@ -466,4 +466,9 @@
 
 .answer{
     margin: 10px 80px 10px 10px;
+}
+
+.small-wine-image{
+    height: 170px;
+    width: 55px;
 }

@@ -4,7 +4,7 @@ import { AuthContext } from '../context/auth.context'
 
 import shapeBookmark from '../images/NavIcons/Shape-bookmark.png'
 import filledBookmark from '../images/NavIcons/Filled-bookmark.png'
-import rose from '../images/WindeBottles/rose.png'
+import rose from '../images/WindeBottles/rose2.png'
 
 const REACT_APP_API_URL = process.env.REACT_APP_API_URL
 
@@ -32,7 +32,7 @@ function SmallWineCard({wine}) {
              <a href ={`/wine/${wine._id}`} >
               <h5 className="small-card-name">{wine.name.split(' ').slice(0, 3).join(' ')}</h5>
              </a>
-             <p className="">{wine.headline.split(' ').slice(0, 6).join(' ') + "..."}</p>
+             <p className="">{wine.headline.split(' ').slice(0, 3).join(' ') + "..."}</p>
             </div>
         </div>
       </div>      

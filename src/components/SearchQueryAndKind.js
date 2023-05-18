@@ -3,7 +3,7 @@ import Natural from "../images/WineKindIcons/Natural winepng (1).png"
 import Red from "../images/WineKindIcons/Red winered png.png"
 import Rose from "../images/WineKindIcons/Rosépng (1).png"
 import Sparkling from "../images/WineKindIcons/Sparklingpng.png"
-import White from "../images/WineKindIcons/White winepng.png"
+import White from "../images/WineKindIcons/White1.png"
 import { useState } from "react"
 
 
@@ -62,7 +62,7 @@ function SearchQueryAndKind({ wineSearch }) {
         <img
           onClick={handleKindClick}
           value="White"
-          className="px-3"
+          className=""
           src={White}
           alt="White"
         />  

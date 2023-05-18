@@ -1,6 +1,6 @@
 import wine from '../images/WindeBottles/default-wine.png'
-import rose from '../images/WindeBottles/rose.png'
-import white from '../images/WindeBottles/white.png'
+import rose from '../images/WindeBottles/rose2.png'
+import white from '../images/WindeBottles/white2.png'
 import champ from '../images/WindeBottles/chapm.png'
 
 import shapeBookmark from '../images/NavIcons/Shape-bookmark.png'
@@ -17,50 +17,50 @@ function Featured(){
 
             <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
-                    <img className="mx-2" src={rose} alt="wine" />
+                    <img className="small-wine-image mx-2" src={rose} alt="wine" />
                 </div>
                 <div>
                     <div className="text-end">
                         <img className="wineCardBookmark" src={shapeBookmark} alt="bookmark" />
                     </div>
-                    <h5>Pillar</h5>
-                    <p>Flowery rose from France...</p>
+                    <h5>Blissful Breeze</h5>
+                    <p>Refreshing tropical fruit medley....</p>
                 </div>
             </div>
             <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
-                    <img className="mx-2" src={white} alt="wine" />
+                    <img className="mx-2 small-wine-image" src={white} alt="wine" />
                 </div>
                 <div>
                     <div className="text-end">
                         <img className="wineCardBookmark" src={shapeBookmark} alt="bookmark" />
                     </div>
-                    <h5>Pillar</h5>
-                    <p>White Wine from Spain...</p>
+                    <h5>Crims Elixir</h5>
+                    <p>Velvety dark berry infusion....</p>
                 </div>
             </div>
             <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
-                    <img className="mx-2" src={champ} alt="wine" />
+                    <img className="small-wine-image mx-2" src={rose} alt="wine" />
                 </div>
                 <div>
                     <div className="text-end">
                         <img className="wineCardBookmark" src={shapeBookmark} alt="bookmark" />
                     </div>
-                    <h5>Lanson</h5>
-                    <p>White Limited edition old vines</p>
+                    <h5>Spark Ember</h5>
+                    <p>Vibrant citrus with fiery effervesc...</p>
                 </div>
             </div>
             <div className="card small-wine-card m-2 px-2 f-flex flex-row justify-content-between align-items-between">
                 <div className="d-flex align-items-center">
-                    <img className="mx-2" src={rose} alt="wine" />
+                    <img className="small-wine-image mx-2" src={white} alt="wine" />
                 </div>
                 <div>
                     <div className="text-end">
                         <img className="wineCardBookmark" src={shapeBookmark} alt="bookmark" />
                     </div>
-                    <h5>Albarino Baixas</h5>
-                    <p>White Limited edition old vines</p>
+                    <h5>Abarino Baixas</h5>
+                    <p>White Limited edition old vin..</p>
                 </div>
             </div>
 
