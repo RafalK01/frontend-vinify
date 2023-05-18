@@ -19,7 +19,7 @@ function SearchResults({ search }) {
 
     const [searchResults, setSearchResults] =useState([])
     useEffect(() => {
-        axios.get(REACT_APP_API_URL, { params: search })
+        axios.get(`${REACT_APP_API_URL}/api/search-wine`, { params: search })
           .then((response) => {
             setSearchResults(response.data);
           }) 
