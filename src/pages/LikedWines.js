@@ -15,7 +15,7 @@ function LikedWines() {
     
     useEffect(() => {
         if (user && user._id) {
-          axios.get(`${REACT_APP_API_URL}/${user._id}`)
+          axios.get(`${REACT_APP_API_URL}/api/user/${user._id}`)
             .then((response) => {
                 setLikedWines(response.data.wineList)
             })

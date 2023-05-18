@@ -39,7 +39,7 @@ function Support() {
   
       try {
        // const response = await fetch('http://localhost:5005/api/completions', options)
-        const response = await fetch(`${REACT_APP_API_URL}/completions`, options)
+        const response = await fetch(`${REACT_APP_API_URL}/api/completions`, options)
         const data = await response.json()
         setMessage(data.choices[0].message)
         setLoading(false)
