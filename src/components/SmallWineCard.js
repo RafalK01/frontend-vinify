@@ -4,9 +4,9 @@ import { AuthContext } from '../context/auth.context'
 
 import shapeBookmark from '../images/NavIcons/Shape-bookmark.png'
 import filledBookmark from '../images/NavIcons/Filled-bookmark.png'
-
-
 import rose from '../images/WindeBottles/rose.png'
+
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL
 
 function SmallWineCard({wine}) {
     const [added, setAdded ] = useState(false)
@@ -15,7 +15,7 @@ function SmallWineCard({wine}) {
 
 
       function unpdateWineList(id) {
-        axios.post(`http://localhost:5005/api/user/${user._id}`, { likedWine: id } )
+        axios.post(`${REACT_APP_API_URL}/api/user/${user._id}`, { likedWine: id } )
         .then((response) => {
           setAdded(true)
         })

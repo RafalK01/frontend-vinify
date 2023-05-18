@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import defaultWine from '../images/WindeBottles/default-wine.png'
-import rose from '../images/WindeBottles/rose.png'
+
+
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL
 
 
 function Recommendation(){
     const [recommendation, setRecommendation] =useState({})
 
     useEffect(() => {
-        axios.get("http://localhost:5005/api/random-wine")
+        axios.get(`${REACT_APP_API_URL}/api/random-wine`)
           .then((response) => {
             setRecommendation(response.data);
           })

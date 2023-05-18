@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 
 import TopBackBar from "../components/TopBarBack";
 
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL
+
+
 function Support() {
     const [ value, setValue ] = useState(null)
     const [ message, setMessage ] = useState(null)
@@ -35,7 +38,8 @@ function Support() {
       }
   
       try {
-        const response = await fetch('http://localhost:5005/api/completions', options)
+       // const response = await fetch('http://localhost:5005/api/completions', options)
+        const response = await fetch(`${REACT_APP_API_URL}/completions`, options)
         const data = await response.json()
         setMessage(data.choices[0].message)
         setLoading(false)

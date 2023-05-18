@@ -11,12 +11,15 @@ import axios from "axios"
 import SmallWineCard from '../components/SmallWineCard'
 import TopBackBar from '../components/TopBarBack'
 
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL
+
+
 
 function SearchResults({ search }) {
 
     const [searchResults, setSearchResults] =useState([])
     useEffect(() => {
-        axios.get("http://localhost:5005/api/search-wine", { params: search })
+        axios.get(REACT_APP_API_URL, { params: search })
           .then((response) => {
             setSearchResults(response.data);
           }) 

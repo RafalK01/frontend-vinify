@@ -16,7 +16,7 @@ function HomePage({ setSearch }) {
     if (query) searchParams.query = query;
     if (kind) searchParams.kind = kind;
     if (origin) searchParams.origin = origin;
-    if (paring) searchParams.paring = paring;
+    if (paring) searchParams.paring = paring
  
     setSearch(searchParams)
     
@@ -32,7 +32,7 @@ function HomePage({ setSearch }) {
       <Paring wineSearch={wineSearch} />
       <NavBar />
     </div>
-  );
+  )
 }
 
 export default HomePage

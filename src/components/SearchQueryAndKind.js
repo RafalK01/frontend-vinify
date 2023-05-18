@@ -6,6 +6,8 @@ import Sparkling from "../images/WineKindIcons/Sparklingpng.png"
 import White from "../images/WineKindIcons/White winepng.png"
 import { useState } from "react"
 
+
+
 function SearchQueryAndKind({ wineSearch }) {
   const [searchQuery, setSearchQuery] = useState("")
 

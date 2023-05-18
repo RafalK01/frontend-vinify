@@ -15,6 +15,7 @@ import veg from '../images/ParingIcons/SmallPairngIcons/bell-pepper-svgrepo-com 
 import seafood from '../images/ParingIcons/SmallPairngIcons/reshot-icon-crab-6DLGZ5Q3EF 1.png'
 import cheese from '../images/ParingIcons/SmallPairngIcons/reshot-icon-cheese-5FDLGPV2JE 1.png'
 
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL
 
 
 function WineDetail(){
@@ -22,7 +23,7 @@ function WineDetail(){
     const { wineId } = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:5005/api/wine/${wineId}`)
+        axios.get(`${REACT_APP_API_URL}/api/wine/${wineId}`)
         .then((response) => {
             setWine(response.data);
           })

@@ -5,6 +5,8 @@ import { AuthContext } from '../context/auth.context'
 import SmallWineCard from '../components/SmallWineCard';
 import TopBackBar from '../components/TopBarBack';
 
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL
+
 function LikedWines() {
     const { user } = useContext(AuthContext)
     const [likedWines, setLikedWines] = useState([])
@@ -13,7 +15,7 @@ function LikedWines() {
     
     useEffect(() => {
         if (user && user._id) {
-          axios.get(`http://localhost:5005/api/user/${user._id}`)
+          axios.get(`${REACT_APP_API_URL}/${user._id}`)
             .then((response) => {
                 setLikedWines(response.data.wineList)
             })
