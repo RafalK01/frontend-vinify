@@ -4,11 +4,9 @@ import { useState, useEffect, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import RafalProfilePic from '../images/RafalProfilePic.png'
+import { AuthContext } from '../context/auth.context'
 
 const REACT_APP_API_URL = process.env.REACT_APP_API_URL
-
-
-import { AuthContext } from '../context/auth.context'
 
 function UserProfile() {
     const { user, logOutUser, authenticateUser  } = useContext(AuthContext) 
