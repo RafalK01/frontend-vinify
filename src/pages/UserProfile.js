@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import RafalProfilePic from '../images/RafalProfilePic.png'
 
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL
+
 
 import { AuthContext } from '../context/auth.context'
 
@@ -33,7 +35,7 @@ function UserProfile() {
       if (name) newData.newName = name
       if (email) newData.newEmail = email
 
-    axios.post(`http://localhost:5005/api/user/${user._id}`, { newData } )
+    axios.post(`${REACT_APP_API_URL}/api/user/${user._id}`, { newData } )
         .then((response) => {
             setName(null)
             setEmail(null)
